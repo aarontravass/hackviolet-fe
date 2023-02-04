@@ -21,32 +21,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { LogoutComponent } from './logout/logout.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { MaterialModule } from './material.module';
+
+const modules = [
+    MatSlideToggleModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    MatInputModule,
+    MatFormFieldModule,
+
+    MatButtonModule,
+
+    MatSidenavModule,
+
+    MatToolbarModule,
+    MatListModule,
+    MatProgressSpinnerModule
+];
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomepageComponent,
-        RegistrationComponent,
-        LogoutComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-      
-        FormsModule,
-        ReactiveFormsModule,
-       
-        ServiceModule,
-       
-        HttpClientModule,
-      
-       MaterialModule,
-        DashboardModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+    imports: modules,
+    exports: modules
 })
-export class AppModule {}
+export class MaterialModule {}

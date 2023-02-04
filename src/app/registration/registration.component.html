@@ -4,20 +4,22 @@
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
-            <mat-form-field class="example-full-width">
+            <mat-form-field >
               <mat-label>First Name</mat-label>
-              <input type="text" matInput [(ngModel)]="body.first_name" placeholder="First Name" name="email" #email="ngModel">
+              <input type="text" matInput [(ngModel)]="body.first_name" placeholder="First Name" name="first_name" #first_name="ngModel">
   
             </mat-form-field>
           </td>
           <td>
-            <mat-form-field class="example-full-width">
+            <mat-form-field >
                 <mat-label>Last Name</mat-label>
-                <input type="text" matInput [(ngModel)]="body.last_name" placeholder="Last Name" name="email" #email="ngModel">
+                <input type="text" matInput [(ngModel)]="body.last_name" placeholder="Last Name" name="last_name" #last_name="ngModel">
     
               </mat-form-field>
           </td>
         </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="example-full-width">
@@ -36,7 +38,7 @@
           </tr>
         <tr>
           <td>
-            <button mat-raised-button name="submit" color="primary" type="submit">Login</button>
+            <button mat-raised-button name="submit" color="primary" type="submit">Sign Up</button>
   
           </td>
         </tr>
