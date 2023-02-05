@@ -1,1 +1,82 @@
-<p>location-settings works!</p>
+<div class="parent">
+  <form class="example-form" (ngSubmit)="getLocations()">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Zip Code</mat-label>
+            <input type="text" matInput [(ngModel)]="body.zip_code" placeholder="Zip Code" name="zip_code"
+              #zip_code="ngModel">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+
+            <mat-form-field appearance="fill">
+              <mat-label>Radius</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let rad of radius_values" [value]="rad">
+                  {{rad}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button mat-raised-button name="submit" color="primary" type="submit">Search Stores</button>
+
+        </td>
+      </tr>
+    </table>
+
+
+  </form>
+
+</div>
+<div *ngIf="store_list.length">
+  <table mat-table [dataSource]="store_list" class="mat-elevation-z8" style="width: 96%; margin: 2%">
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{element.name}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef>Address</th>
+      <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Phone</th>
+      <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="open">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" (click)="save(element.locationId)">
+          <mat-icon>
+            save
+          </mat-icon>
+          Save
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

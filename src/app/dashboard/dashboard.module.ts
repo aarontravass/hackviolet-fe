@@ -9,9 +9,10 @@ import { DashboardComponent } from './dashboard.component';
 import { CommonModule } from '@angular/common';
 import { RecipeViewerComponent } from './recipe-viewer/recipe-viewer.component';
 import { LocationSettingsComponent } from './location-settings/location-settings.component';
+import { KrogerSearchComponent } from './kroger/kroger-search/kroger-search.component';
 
 @NgModule({
     imports: [DashboardRoutingModule, MaterialModule, FormsModule, CommonModule],
-    declarations: [MainComponent, WeightChartComponent, RecipesComponent, DashboardComponent, RecipeViewerComponent, LocationSettingsComponent]
+    declarations: [MainComponent, WeightChartComponent, RecipesComponent, DashboardComponent, RecipeViewerComponent, LocationSettingsComponent, KrogerSearchComponent]
 })
 export class DashboardModule {}
