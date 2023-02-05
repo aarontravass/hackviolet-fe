@@ -68,7 +68,7 @@ export class MainComponent {
             type: 'doughnut', //this denotes tha type of chart
             data: {
                 // values on X-Axis
-                labels: ['Pink', 'White'],
+                labels: ['Fullfilled Calories', 'Remaining Calories'],
                 datasets: [
                     {
                         label: 'Daily Calorie Intake',
