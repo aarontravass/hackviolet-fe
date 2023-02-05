@@ -21,9 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { LogoutComponent } from './logout/logout.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MaterialModule } from './material.module';
+import { CommonModule } from '@angular/common';
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,15 +36,15 @@ import { MaterialModule } from './material.module';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-      
+        CommonModule,
         FormsModule,
         ReactiveFormsModule,
-       
+
         ServiceModule,
-       
+
         HttpClientModule,
-      
-       MaterialModule,
+
+        MaterialModule,
         DashboardModule
     ],
     providers: [],

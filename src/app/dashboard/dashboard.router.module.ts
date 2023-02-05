@@ -1,26 +1,33 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard.component';
 import { MainComponent } from './main/main.component';
-
-
+import { RecipesComponent } from './recipes/recipes.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: MainComponent,
-       
+        component: DashboardComponent,
+        children: [
+            {
+                path:'',
+                component: MainComponent
+            },
+            {
+                path: 'recipes',
+                component: RecipesComponent,
+                
+            }
+        ]
     },
     {
         path: '**',
         component: MainComponent
     }
-   
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
-export class DashboardRoutingModule{
-
-}
+export class DashboardRoutingModule {}

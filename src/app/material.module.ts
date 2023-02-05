@@ -1,10 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomepageComponent } from './homepage/homepage.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -14,16 +8,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { RegistrationComponent } from './registration/registration.component';
-import { ServiceModule } from './services/services.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-import { LogoutComponent } from './logout/logout.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { DashboardModule } from './dashboard/dashboard.module';
-
+import {MatTableModule} from '@angular/material/table'; 
+import {MatDialogModule} from '@angular/material/dialog'; 
 const modules = [
     MatSlideToggleModule,
     MatGridListModule,
@@ -34,9 +24,9 @@ const modules = [
     LayoutModule,
     MatInputModule,
     MatFormFieldModule,
-
+    MatTableModule,
     MatButtonModule,
-
+    MatDialogModule,
     MatSidenavModule,
 
     MatToolbarModule,
