@@ -11,7 +11,9 @@
               </mat-card-title-group>
             </mat-card-header>
             <mat-card-content>
+                
                 <img mat-card-lg-image style="max-width:20%" [src]="data.recipe.image" >
+                <p>Check the box below for missing ingredients</p>
                 <mat-selection-list #ingredient>
                     <mat-list-option *ngFor="let ingredient of data.recipe.ingredients">
                       {{ingredient.text}}
