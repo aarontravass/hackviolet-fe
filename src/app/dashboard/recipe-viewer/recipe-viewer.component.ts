@@ -27,7 +27,7 @@ export class RecipeViewerComponent implements OnInit {
         );
         localStorage.setItem(
             'calorie_count',
-            (calorie_count - this.data.recipe.calories).toString()
+            (calorie_count + this.data.recipe.calories).toString()
         );
         this.added = true;
     }

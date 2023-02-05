@@ -3,10 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { API_URL } from "../constants";
-import { LoginBody } from "../homepage/homepage.component";
-import { LogoutBody } from "../logout/logout.component";
 import { ResponseModel } from "../models/promiseresult";
-import { RegistrationBody } from "../registration/registration.component";
 
 @Injectable({
     providedIn: 'root'
