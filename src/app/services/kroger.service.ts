@@ -23,7 +23,7 @@ export class KrogerService {
 
     findStores(body: Locationform): Observable<ResponseModel> {
         const params = new HttpParams()
-            .set('zip_code', body.zip_code)
+            .set('zipcode', body.zipcode)
             .set('radius', body.radius);
         return this.http
             .get<ResponseModel>(API_URL + 'kroger/locations', { params })

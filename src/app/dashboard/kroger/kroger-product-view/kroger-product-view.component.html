@@ -1,0 +1,30 @@
+<div *ngIf="product">
+    <h1 mat-dialog-title></h1>
+    <div mat-dialog-content>
+        <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title-group>
+                
+                <mat-card-title>{{product.brand}}</mat-card-title>
+               
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <img mat-card-lg-image style="max-width:20%" [src]="product.image" >
+             
+                  <mat-list role="list">
+                    <mat-list-item role="listitem"><b>Price</b>: {{product.price | currency:'USD'}}</mat-list-item>
+                    <mat-list-item role="listitem"><b>Description</b>: {{product.description || 'N/A'}}</mat-list-item>
+                    <mat-list-item role="listitem"><b>Aisle</b>: {{product.aisle|| 'N/A'}}</mat-list-item>
+                    <mat-list-item role="listitem"><b>Stock</b>: {{product.stock || 'N/A'}}</mat-list-item>
+                    <mat-list-item role="listitem"><b>Size</b>: {{product.size|| 'N/A'}}</mat-list-item>
+                  </mat-list>
+                  
+            </mat-card-content>
+          </mat-card>
+       
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+    </div>
+</div>

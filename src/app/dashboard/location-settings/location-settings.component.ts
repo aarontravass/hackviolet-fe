@@ -4,7 +4,7 @@ import { Stores } from '../../models/kroger';
 import { KrogerService } from '../../services/kroger.service';
 
 export class Locationform {
-    zip_code: string;
+    zipcode: string;
     radius: string;
 }
 
@@ -21,7 +21,7 @@ export class LocationSaveForm {
 export class LocationSettingsComponent implements OnInit {
     radius_values = ['1', '3', '5', '10'];
     constructor(private readonly kroger: KrogerService) { }
-    displayedColumns = ['name', 'address', 'phone']
+    displayedColumns = ['name', 'address', 'phone', 'open']
     body = new Locationform();
     save_body = new LocationSaveForm();
 

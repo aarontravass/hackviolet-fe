@@ -1,27 +1,24 @@
 <div class="parent">
   <form class="example-form" (ngSubmit)="getLocations()">
-    <table class="example-full-width" cellspacing="0">
+    <table class="example-full-width tb" cellspacing="0">
       <tr>
         <td>
           <mat-form-field class="example-full-width">
             <mat-label>Zip Code</mat-label>
-            <input type="text" matInput [(ngModel)]="body.zip_code" placeholder="Zip Code" name="zip_code"
+            <input type="text" matInput [(ngModel)]="body.zipcode" placeholder="Zip Code" name="zip_code"
               #zip_code="ngModel">
           </mat-form-field>
         </td>
       </tr>
       <tr>
         <td>
-          <mat-form-field class="example-full-width">
-
-            <mat-form-field appearance="fill">
-              <mat-label>Radius</mat-label>
-              <mat-select>
-                <mat-option *ngFor="let rad of radius_values" [value]="rad">
-                  {{rad}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Radius</mat-label>
+            <mat-select [(ngModel)]="body.radius" name="radius">
+              <mat-option *ngFor="let rad of radius_values" [value]="rad">
+                {{rad}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
         </td>
       </tr>
