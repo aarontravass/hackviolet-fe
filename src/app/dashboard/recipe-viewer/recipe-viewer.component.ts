@@ -13,6 +13,7 @@ export class RecipeViewerComponent implements OnInit {
         @Inject(MAT_DIALOG_DATA) public data: { recipe: Recipe }
     ) {}
 
+    added = false;
     onNoClick(): void {
         this.dialogRef.close();
     }
@@ -20,6 +21,7 @@ export class RecipeViewerComponent implements OnInit {
     ngOnInit(): void {}
 
     addRecipe(): void {
+        if(this.added) return;
         const calorie_count = parseInt(
             localStorage.getItem('calorie_count') || '0'
         );
@@ -27,5 +29,6 @@ export class RecipeViewerComponent implements OnInit {
             'calorie_count',
             (calorie_count - this.data.recipe.calories).toString()
         );
+        this.added = true;
     }
 }
