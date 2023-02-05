@@ -21,7 +21,7 @@ export class LogoutComponent implements OnInit {
     async ngOnInit(): Promise<void> {
         this.body.auth_token = sessionStorage.getItem('auth_token') || '';
         this.body.user_guid = sessionStorage.getItem('user_guid') || '';
-        //await this.logout();
+        await this.logout();
     }
 
     async logout() {
